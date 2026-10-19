@@ -127,7 +127,7 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var d = new FormData(form);
-      var msg = 'Hello doorsteptvservice.in, I would like to book a TV service.%0A%0A' +
+      var msg = 'Hello DoorstepTVService, please call me back to book a TV repair.%0A%0A' +
         '*Name:* ' + encodeURIComponent(d.get('name') || '') + '%0A' +
         '*Phone:* ' + encodeURIComponent(d.get('phone') || '') + '%0A' +
         '*TV Brand:* ' + encodeURIComponent(d.get('brand') || '') + '%0A' +
