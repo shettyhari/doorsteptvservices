@@ -1,6 +1,5 @@
 // doorsteptvservice.in — site interactions
 (function () {
-  var WHATSAPP = '919989032865';
 
   // Mobile menu
   var toggle = document.querySelector('.menu-toggle');
@@ -120,23 +119,6 @@
       }).observe(el);
     } else { run(); }
   });
-
-  // Booking form -> WhatsApp message
-  var form = document.getElementById('bookingForm');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var d = new FormData(form);
-      var msg = 'Hello DoorstepTVService, please call me back to book a TV repair.%0A%0A' +
-        '*Name:* ' + encodeURIComponent(d.get('name') || '') + '%0A' +
-        '*Phone:* ' + encodeURIComponent(d.get('phone') || '') + '%0A' +
-        '*TV Brand:* ' + encodeURIComponent(d.get('brand') || '') + '%0A' +
-        '*Service:* ' + encodeURIComponent(d.get('service') || '') + '%0A' +
-        '*Address:* ' + encodeURIComponent(d.get('address') || '') + '%0A' +
-        '*Problem:* ' + encodeURIComponent(d.get('message') || '');
-      window.open('https://wa.me/' + WHATSAPP + '?text=' + msg, '_blank');
-    });
-  }
 
   // Footer year
   document.querySelectorAll('.year').forEach(function (el) { el.textContent = new Date().getFullYear(); });
